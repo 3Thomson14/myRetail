@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "fd8ba2f0-d3e7-4186-b536-abfc988ce0d3",
+		"name": "myRetail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UPDATE Product Price",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":15643793,\"current_price\":{\"value\":20.49,\"currencycode\":\"USD\"}}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/products/15643793",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"15643793"
+					]
+				},
+				"description": "Update-Product-Price"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Product Price - Product Not Found",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":15643793,\"current_price\":{\"value\":20.49,\"currencycode\":\"USD\"}}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/products/123",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"123"
+					]
+				},
+				"description": "Update-product-price-Not-Found"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/products/15643793",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"15643793"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product Details Not found",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/products/123",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product Name Not Found",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/products/name/123",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"name",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/products/name/15643793",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"name",
+						"15643793"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
